@@ -1,0 +1,77 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #444444;
+  color: white;
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-left h1, .nav-center h1 {
+  margin: 0;
+  cursor: pointer;
+}
+
+.nav-center {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.profile-btn {
+  background: none;
+  border: none;
+  color: rgb(234, 225, 225);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-btn:hover {
+  transform: scale(1.1);
+}
+
+.profile-panel {
+  position: fixed;
+  right: -300px;
+  top: 60px;
+  width: 250px;
+  height: 100vh;
+  background: #f8f9fa;
+  color: black;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+}
+
+.profile-panel.visible {
+  right: 0;
+}
+
+.profile-panel h2 {
+  margin-top: 0;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}

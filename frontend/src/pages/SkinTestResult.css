@@ -1,0 +1,30 @@
+.result-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.result-image {
+  width: 600px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.prediction {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.back-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}

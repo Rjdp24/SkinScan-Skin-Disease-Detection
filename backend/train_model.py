@@ -5,7 +5,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import os
 
 # Define dataset paths
-DATASET_PATH = "D:\\Dataset\\"
+DATASET_PATH = "D:\\Dataset_SkinScan\\"
 TRAIN_DIR = os.path.join(DATASET_PATH, "train")
 VAL_DIR = os.path.join(DATASET_PATH, "val")
 

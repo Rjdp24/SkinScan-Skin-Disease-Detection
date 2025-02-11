@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -7,7 +7,20 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [showProfile, setShowProfile] = useState(false);
   const isDashboard = location.pathname === "/dashboard";
+
+  // ✅ Fetch user data from localStorage (Update when page refreshes)
+  const [user, setUser] = useState({ username: "Guest", email: "guest@example.com" });
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, [location]); // ✅ Re-run when location changes (fixes issue)
+
   const handleLogout = () => {
+    localStorage.removeItem("user"); // ✅ Clear user data
+    localStorage.removeItem("token"); // ✅ Remove JWT token
     navigate("/");
   };
 
@@ -35,9 +48,8 @@ const Navbar = () => {
       {isDashboard && (
         <div className={`profile-panel ${showProfile ? "visible" : ""}`}>
           <h2>User Profile</h2>
-          <p><strong>Name:</strong> John Doe</p>
-          <p><strong>Email:</strong> johndoe@example.com</p>
-          <p><strong>Member Since:</strong> 2024</p>
+          <p><strong>Name:</strong> {user.username}</p>
+          <p><strong>Email:</strong> {user.email}</p>
           <button className="logout-btn" onClick={handleLogout}>Logout</button>
         </div>
       )}
@@ -46,3 +58,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

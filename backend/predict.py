@@ -63,6 +63,6 @@ def predict_skin_disease(image_data):
 
 
 # Test Prediction
-TEST_IMAGE = "D:\\Dataset_SkinScan\\test\\Acne and Rosacea Photos\\acne-cystic-19.jpg"  # Change this to your test image path
+TEST_IMAGE = "C:\\Users\\nishu\\Pictures\\localized-pemphigoid-3.jpg"  # Change this to your test image path
 result = predict_skin_disease(TEST_IMAGE)
 print(f"✅ Predicted Skin Disease: {result}")

@@ -7,8 +7,9 @@ from tensorflow.keras.preprocessing import image
 from fastapi.middleware.cors import CORSMiddleware
 
 # Load Model
-MODEL_PATH = "D:\\SkinScan\\backend\\model\\saved_model.keras"
+MODEL_PATH = "D:\\SkinScan_2\\backend\\model\\skin_disease_model.h5"
 model = tf.keras.models.load_model(MODEL_PATH)
+
 
 # Define Class Labels
 class_names = [

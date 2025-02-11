@@ -78,8 +78,8 @@ import shutil
 from sklearn.model_selection import train_test_split
 
 # Define paths
-original_train_dir = "D:\\Dataset_SkinScan\\train"  # Your existing training dataset
-val_dir = "D:\\Dataset_SkinScan\\val"  # Directory for validation set
+original_train_dir = "C:\\Users\\nishu\\Downloads\\archive (1)\\Dataset\\train"  # Your existing training dataset
+val_dir = "C:\\Users\\nishu\\Downloads\\archive (1)\\Dataset\\val"  # Directory for validation set
 
 # Create validation directory if not exists
 os.makedirs(val_dir, exist_ok=True)
